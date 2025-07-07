@@ -15,7 +15,7 @@ function Login() {
         e.preventDefault();
         setError(null);
         try {
-            const res = await axios.post("http://127.0.0.1:8000/api/accounts/login/", form);
+            const res = await axios.post("https://backend-seven-amber-92.vercel.app/api/accounts/login/", form);
 
             if (res.status !== 200) {
                 throw new Error("Login failed");
