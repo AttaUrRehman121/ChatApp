@@ -7,13 +7,13 @@ const ChatPage = ({ username = "User1" }) => {
     const [message, setMessage] = useState("");
     const ws = useRef(null);
     const messageEndRef = useRef(null);
-    const BaseURLS = "http://127.0.0.1:8000/";
+    const BaseURLS = "https://backend-seven-amber-92.vercel.app/api/";
 
 
     useEffect(() => {
         const fetchMessages = async () => {
             try {
-                const res = await fetch(`${BaseURLS}api/chat/messages/${roomName}/`);
+                const res = await fetch(`${BaseURLS}chat/messages/${roomName}/`);
                 const data = await res.json();
 
                 const normalized = data.map(msg => ({
@@ -31,7 +31,7 @@ const ChatPage = ({ username = "User1" }) => {
 
 
     useEffect(() => {
-        ws.current = new WebSocket(`ws://127.0.0.1:8000/ws/chat/${roomName}/`);
+        ws.current = new WebSocket(`ws://backend-seven-amber-92.vercel.app/ws/chat/${roomName}/`);
 
         ws.current.onopen = () => {
             console.log("WebSocket connected");
