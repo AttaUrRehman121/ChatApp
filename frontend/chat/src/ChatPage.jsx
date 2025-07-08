@@ -71,9 +71,9 @@ const ChatPage = ({ username = "User1" }) => {
     };
 
     return (
-        <div className="container py-5">
+        <div className="container py-8">
             <div className="row justify-content-center">
-                <div className="col-md-10">
+                <div className="col-md-18">
                     <div className="card shadow-sm">
                         <div className="card-header bg-primary text-white">
                             <h5 className="mb-0">Chat Room: {roomName}</h5>
