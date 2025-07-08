@@ -31,7 +31,7 @@ const ChatPage = ({ username = "User1" }) => {
 
 
     useEffect(() => {
-        ws.current = new WebSocket(`ws://backend-seven-amber-92.vercel.app/ws/chat/${roomName}/`);
+        ws.current = new WebSocket(`wss://backend-seven-amber-92.vercel.app/ws/chat/${roomName}/`);
 
         ws.current.onopen = () => {
             console.log("WebSocket connected");
