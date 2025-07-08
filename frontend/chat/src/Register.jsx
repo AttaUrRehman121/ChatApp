@@ -22,7 +22,7 @@ function Register() {
         e.preventDefault();
         setError(null);
         try {
-            const response = await axios.post("https://backend-seven-amber-92.vercel.app/api/accounts/register/", form);
+            const response = await axios.post("https://backend-production-5b2b.up.railway.app/api/accounts/register/", form);
             console.log(response.data);
 
             alert("Registration successful! Please log in.");

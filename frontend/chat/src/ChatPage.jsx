@@ -7,7 +7,7 @@ const ChatPage = ({ username = "User1" }) => {
     const [message, setMessage] = useState("");
     const ws = useRef(null);
     const messageEndRef = useRef(null);
-    const BaseURLS = "https://backend-seven-amber-92.vercel.app/api/";
+    const BaseURLS = "https://backend-production-5b2b.up.railway.app/api/";
 
 
     useEffect(() => {
@@ -31,7 +31,7 @@ const ChatPage = ({ username = "User1" }) => {
 
 
     useEffect(() => {
-        ws.current = new WebSocket(`wss://backend-seven-amber-92.vercel.app/ws/chat/${roomName}/`);
+        ws.current = new WebSocket(`wss://backend-production-5b2b.up.railway.app/ws/chat/${roomName}/`);
 
         ws.current.onopen = () => {
             console.log("WebSocket connected");

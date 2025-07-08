@@ -14,7 +14,7 @@ function RoomList() {
 
     const fetchRooms = async () => {
         try {
-            const res = await axios.get("https://backend-seven-amber-92.vercel.app/api/chat/rooms/");
+            const res = await axios.get("https://backend-production-5b2b.up.railway.app/api/chat/rooms/");
             setRooms(res.data);
         } catch (err) {
             console.error("Failed to fetch rooms", err);
@@ -29,7 +29,7 @@ function RoomList() {
             navigate(`/chat/${roomInput.trim()}`);
         } else {
             try {
-                const res = await axios.post("https://backend-seven-amber-92.vercel.app/api/chat/rooms/", {
+                const res = await axios.post("https://backend-production-5b2b.up.railway.app/api/chat/rooms/", {
                     name: roomInput.trim(),
                 });
                 setRooms([...rooms, res.data]);
