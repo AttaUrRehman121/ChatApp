@@ -1,6 +1,6 @@
 // src/components/Layout.jsx
 import React from 'react';
-import Header from './header.jsx';
+import Header from './Header.jsx';
 import Footer from './Footer';
 import { Outlet } from 'react-router-dom';
 
