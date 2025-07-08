@@ -1,13 +1,15 @@
-import React, { useEffect, useState, useRef } from "react";
+import { useEffect, useState, useRef } from "react";
 import { useParams } from "react-router-dom";
 
 const ChatPage = ({ username = "User1" }) => {
     const { roomName } = useParams();
+
     const [messages, setMessages] = useState([]);
     const [message, setMessage] = useState("");
     const ws = useRef(null);
     const messageEndRef = useRef(null);
     const BaseURLS = "https://backend-production-5b2b.up.railway.app/api/";
+
 
 
     useEffect(() => {
