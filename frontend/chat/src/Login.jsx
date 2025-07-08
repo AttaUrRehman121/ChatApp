@@ -48,11 +48,11 @@ function Login() {
     };
 
     return (
-        <div className="container mt-8">
+        <div className="container mt-5">
             <h2 className="mb-4">Login</h2>
             {error && <div className="alert alert-danger">{error}</div>}
             <form onSubmit={handleSubmit}>
-                <div className="mb-3">
+                <div className="mb-5">
                     <label htmlFor="email" className="form-label">Email</label>
                     <input
                         type="email"
