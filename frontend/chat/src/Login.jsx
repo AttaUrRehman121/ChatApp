@@ -10,7 +10,13 @@ function Login() {
     const handleChange = (e) => {
         setForm({ ...form, [e.target.id]: e.target.value });
     };
-
+    React.useEffect(() => {
+        const access = localStorage.getItem("access");
+        const user = localStorage.getItem("user");
+        if (access && user) {
+            navigate("/RoomList");
+        }
+    }, [navigate]);
     const handleSubmit = async (e) => {
         e.preventDefault();
         setError(null);
